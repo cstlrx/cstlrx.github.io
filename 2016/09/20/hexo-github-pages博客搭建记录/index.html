@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/09/20/hexo-github-pages博客搭建记录/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="主要记录了根据hexo和github pages搭建博客的过程。">
-<meta property="og:updated_time" content="2016-09-20T05:38:32.299Z">
+<meta property="og:updated_time" content="2016-09-20T11:25:29.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github pages博客搭建记录">
 <meta name="twitter:description" content="主要记录了根据hexo和github pages搭建博客的过程。">
@@ -23,6 +23,7 @@
     <link rel="icon" href="//favicon.png">
   
   <script src="/style.js"></script>
+
 </head>
 
 <body>
@@ -33,12 +34,12 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img src="null" class="js-avatar">
+			<img src="http://i2.buimg.com/4851/7bf65b4f463f92f2.png" class="js-avatar">
 			
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">李瑞贤</a></h1>
+		  <h1 class="header-author"><a href="/">lrx</a></h1>
 		</hgroup>
 
 		
@@ -49,8 +50,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/随笔">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -99,17 +98,17 @@
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"><i class="icon-list"></i></div>
-  		<h1 class="header-author js-mobile-header hide">李瑞贤</h1>
+  		<h1 class="header-author js-mobile-header hide">lrx</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
 				
-					<img src="null" class="js-avatar">
+					<img src="http://i2.buimg.com/4851/7bf65b4f463f92f2.png" class="js-avatar">
 				
 			</div>
 			<hgroup>
-			  <h1 class="header-author">李瑞贤</h1>
+			  <h1 class="header-author">lrx</h1>
 			</hgroup>
 			
 			<p class="header-subtitle">迎娶白富美，走上人生巅峰</p>
@@ -118,8 +117,6 @@
 				<ul>
 				
 					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/tags/随笔">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -161,12 +158,20 @@
       
         <p>主要记录了根据hexo和github pages搭建博客的过程。<br><a id="more"></a></p>
 <h2 id="9月18日"><a href="#9月18日" class="headerlink" title="9月18日"></a>9月18日</h2><p>之前才开始学习java时，看java的学习路线，说如果没有一些项目做，就自己搭建一个博客，部署一下，看的心痒痒，感觉好高大上。就想着什么时候自己弄一个。昨天各种找java的学习路线，        因为实在不知道怎么学，无意中发现一个大神的博客。第一眼看去，简直太帅了，那是一种简约的美丽。博客中记录了他从大学到工作的一些经历。看完以后，觉得人家的大学充满了激情，那么的充实。而自己大学已经过去了一半，仔细回想却没有那么多值得留念的情景，甚是难受。也是时候好好记录一下自己的生活了，并且可以常常做一些技术上的总结。得知是他用github+hexo做的，更加坚定了赶紧弄一个的想法，顺便见识一下github上的各种开源项目。今天下午看了一些攻略，就决定晚上开始搭建博客之旅。网上教程很多，我想应该没问题。</p>
-<p>先按照网上的教程，配置好各种环境。下载如下：<br>        <a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a><br>        <a href="https://git-scm.com/" target="_blank" rel="external">git</a><br>按照步骤安装即可。<br>接下来需要做的是下载hexo，步骤如下：<br>建立文件夹Myblog;<br>右键进入git bash，然后cd Myblog;<br>如果在墙内，运行以下命令： npm install -g hexo<br>会一直停在这个页面，没有反应，故运行以下命令<br>：npm install -g  cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>这是淘宝的镜像源，可以直接使用。<br>运行命令：cnpm install -g hexo-cli（注意是cnpm）安装hexo<br>运行命令：hexo init blog（blog是文件夹名字可以替换为任何你想要的）<br>运行命令：cd blog<br>运行命令：cnpm install    //一定要运行，否则可能会出错<br>运行命令：hexo generate<br>运行命令：hexo server<br>成功会有提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>接下来就可在浏览器中输入地址查看一个Helloworld的静态网页了。<br>本地运行成功以后，就可以尝试部署到github上了。</p>
+<p>先按照网上的教程，配置好各种环境。下载如下：<br>        <a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs</a><br>        <a href="https://git-scm.com/" target="_blank" rel="external">git</a><br>按照步骤安装即可。<br>接下来需要做的是下载hexo，步骤如下：<br>建立文件夹Myblog;<br>右键进入git bash，然后cd Myblog;<br>如果在墙内，运行以下命令： npm install -g hexo<br>会一直停在这个页面，没有反应，故运行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">：npm install -g  cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>这是淘宝的镜像源，可以直接使用。<br>运行命令：cnpm install -g hexo-cli（注意是cnpm）安装hexo<br>运行命令：hexo init blog（blog是文件夹名字可以替换为任何你想要的）<br>运行命令：cd blog<br>运行命令：cnpm install    //一定要运行，否则可能会出错<br>运行命令：hexo generate<br>运行命令：hexo server<br>成功会有提示： Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>接下来就可在浏览器中输入地址查看一个Helloworld的静态网页了。<br>本地运行成功以后，就可以尝试部署到github上了。</p>
 <h2 id="9月19日"><a href="#9月19日" class="headerlink" title="9月19日"></a>9月19日</h2><p>我们需要通过ssh和github进行连接，github设置ssh，参考如下：<br><a href="http://blog.csdn.net/binyao02123202/article/details/20130891" target="_blank" rel="external">http://blog.csdn.net/binyao02123202/article/details/20130891</a></p>
-<p>后来一直出现问题，git ssh连接失败，提示：permission denied<br>解决办法：<a href="http://www.cnblogs.com/shure/archive/2012/11/07/2758545.html" target="_blank" rel="external">http://www.cnblogs.com/shure/archive/2012/11/07/2758545.html</a><br>连接成功！<br>我想着先部署到github上，主题什么的之后再改，只想看一下效果。<br>首先安装插件：cnpm install hexo-deployer-git –save<br>修改_config.yml,<br>deploy:<br>  type: git<br>  repos: git@github.com/userneme/username.github.io.git<br>  branch: master   #部署分支,一般使用master主分支<br>一定要注意type前有空格，不加会有错。<br>接下来:<br>hexo g<br>hexo d<br>出现错误:<br>‘You should configure deployment settings in _config.yml first!<br>Available deployer plugins:<br>For more help, you can check the online docs: <a href="http://hexo.io/" target="_blank" rel="external">http://hexo.io/</a>‘<br>试了好多遍，都不成功。<br>最后发现原因：就是因为_config.yml中deploy下的type等前面没有空格导致。。。。。<br>再次hexo d,这次终于有了一堆信息，本以为要成功，最后又来个错误，因为该回宿舍了，又实在不想弄了，就此结束。只能等到明天。</p>
-<h2 id="9月20日"><a href="#9月20日" class="headerlink" title="9月20日"></a>9月20日</h2><p>今天逃了一节课，过来继续弄，按照步骤，<br>‘ssh -T github<br>hexo g<br>hexo d</p>
+<p>后来一直出现问题，git ssh连接失败，提示：permission denied<br>解决办法：<a href="http://www.cnblogs.com/shure/archive/2012/11/07/2758545.html" target="_blank" rel="external">http://www.cnblogs.com/shure/archive/2012/11/07/2758545.html</a><br>连接成功！<br>我想着先部署到github上，主题什么的之后再改，只想看一下效果。<br>首先安装插件：cnpm install hexo-deployer-git –save<br>修改_config.yml,</p>
+<pre><code>deploy:
+  type: git
+  repos: git@github.com/userneme/username.github.io.git  
+  branch: master   #部署分支,一般使用master主分支
+</code></pre><p>一定要注意type前有空格，不加会有错。<br>接下来:<br>hexo g<br>hexo d<br>出现错误:<br>    You should configure deployment settings in _config.yml first!<br>    Available deployer plugins:<br>    For more help, you can check the online docs: <a href="http://hexo.io/" target="_blank" rel="external">http://hexo.io/</a><br>试了好多遍，都不成功。<br>最后发现原因：就是因为_config.yml中deploy下的type等前面没有空格导致。。。。。<br>再次hexo d,这次终于有了一堆信息，本以为要成功，最后又来个错误，因为该回宿舍了，又实在不想弄了，就此结束。只能等到明天。</p>
+<h2 id="9月20日"><a href="#9月20日" class="headerlink" title="9月20日"></a>9月20日</h2><p>今天逃了一节课，过来继续弄，按照步骤，<br>ssh -T github<br>hexo g<br>hexo d</p>
 <p>居然直接成功了。。。仍然有warning。<br>但还是忍不住打开：cstfly.github.io,成功出现了Hello world!!!</p>
-<p>‘warning: LF will be replaced by CRLF in 2016/09/18/h’<br>网上搜到解决办法：执行命令：git config –gobal core.autocrlf false</p>
+<pre><code>warning: LF will be replaced by CRLF in 2016/09/18/h
+</code></pre><p>网上搜到解决办法：执行命令：git config –global core.autocrlf false</p>
 <p>接下来主要剩下博客主题的修改了。</p>
 
       
@@ -234,11 +239,18 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 李瑞贤
+    		&copy; 2016 lrx
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
+        <div class="footer-middle">
+          <span id="busuanzi_container_site_uv">
+          自2016年9月20日访客<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+          <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+          </script>
+        </div>
     </div>
   </div>
 </footer>
@@ -318,29 +330,13 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-friends">
   		
-  			<div class="friends-wrap" id="js-friends">
-  			
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
-  	        
-  	        </div>
-  		
     	</section>
     
 
     
     	<section class="tools-section tools-section-me">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">追求幸福生活的小青年</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">西安邮电大学在校生，追求幸福生活的小青年</div>
   	  	
     	</section>
     
