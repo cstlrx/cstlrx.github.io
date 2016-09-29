@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>coding the world</title>
+  <title>LeetCode刷题 | coding the world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术加生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="coding the world">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="LeetCode的第一题Two SumTotal Accepted: 309644Total Submissions: 1145736Difficulty: EasyGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode刷题">
+<meta property="og:url" content="http://yoursite.com/2016/09/28/LeetCode刷题/index.html">
 <meta property="og:site_name" content="coding the world">
-<meta property="og:description" content="技术加生活">
+<meta property="og:description" content="LeetCode的第一题Two SumTotal Accepted: 309644Total Submissions: 1145736Difficulty: EasyGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assu">
+<meta property="og:updated_time" content="2016-09-28T09:12:34.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coding the world">
-<meta name="twitter:description" content="技术加生活">
+<meta name="twitter:title" content="LeetCode刷题">
+<meta name="twitter:description" content="LeetCode的第一题Two SumTotal Accepted: 309644Total Submissions: 1145736Difficulty: EasyGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assu">
   
     <link rel="alternative" href="/atom.xml" title="coding the world" type="application/atom+xml">
   
@@ -137,9 +138,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-四旋翼学习-一" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-LeetCode刷题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -148,62 +147,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/28/四旋翼学习-一/">四旋翼学习(一)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="四旋翼原理简单介绍"><a href="#四旋翼原理简单介绍" class="headerlink" title="四旋翼原理简单介绍"></a>四旋翼原理简单介绍</h3><p>基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。<br>四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。</p>
-<p>升降：飞机放在地上，四个旋翼开始旋转，当提供的升力比它本身的重力大时，四旋翼就可以平稳的升起了，下降同理。<br>前后飞行：某一方向两个旋翼转速不变，前进的方向上，一个旋翼加速，另一个减速，飞机就会与地面有一个夹角，这就可以使飞机有向前的动力，至于偏的角度还是需要控制的。<br>俯仰与翻滚同理。偏航暂时不管。</p>
-<h3 id="mpu6050在四旋翼中的应用"><a href="#mpu6050在四旋翼中的应用" class="headerlink" title="mpu6050在四旋翼中的应用"></a>mpu6050在四旋翼中的应用</h3><p>mpu6050集成了一个三轴加速度传感器、三轴角速度传感器以及一个数字运动处理单元DMP。我们可以通过mpu获得飞机当前在三个方向加速度及角速度，我们可以通过内置的DMP将其转换为四元数，进而转换为俯仰角、翻滚角、航向角。当然也不止四元数一个方法。</p>
-<p>要想让飞机保持平衡，在它有一定倾角后，需要改变电机转速。对比于平衡车，电机的控制应该需要三个角及三个方向上的角速度。比如：飞机前倾了一定角度，要想让它平衡就需要后边的电机加速，至于怎么加速：倾斜角度大，就需要转速加的多，倾斜角度减小后，转速就需要加的慢。我们需要适当减小角速度对电机转速的影响:即角速度越快，越需要减慢电机的变化。简易公式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwm = 角度*kp+角速度*kd  //kp较大 kd小于1</div></pre></td></tr></table></figure></p>
-<p>后边慢慢补充吧，如果文章中理解错了以后再改。</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/28/四旋翼学习-一/" class="archive-article-date">
-  	<time datetime="2016-09-28T15:17:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-28</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/四旋翼/">四旋翼</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-LeetCode刷题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/28/LeetCode刷题/">LeetCode刷题</a>
+    <h1 class="article-title" itemprop="name">
+      LeetCode刷题
     </h1>
   
 
@@ -237,113 +182,46 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-9月26日" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2016/09/28/四旋翼学习-一/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/26/9月26日/">9月26日</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>周四高中朋友吕说想吃葫芦鸡，周五便过来了。真的有好久一段时间没见过面了，心里挺高兴的，也有点紧张，因为感觉自己好长时间了也没改变，还是老样子。在西外的门口等她，等的过程中听着陕西的出租车司机聊天，感觉陕西话奏四好听，也感觉他们很淳朴。等了两辆公交，看着下来的每一个人，生怕错过了。还是错过了，她先看见的我。然后一块去了外国语旁边的竹间葫芦鸡。跟她聊了一些最近的情况，还是挺开心的。想对我而言她还是改变了点的，当然差不多依旧老样子哈哈。</p>
-<p>周六就是延安小分队的聚会了，跟吕聊完天也想通了许多，也挺期待晚上的聚会了，毕竟跟这么多人交朋友挺值得兴奋的。两个老师也来了。跟大家交流也知道了很多事。玩了会狼人杀，喝了点酒。最后以大家在婚礼的舞台上合影结束。</p>
-<p>不想写了，反正最近感觉自己想交很多朋友，想赶紧好好学习。<br>PS：最近老是在大活值班，很无聊呀。<br>PS：话说梦里老是梦见自己抽烟。</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/26/9月26日/" class="archive-article-date">
-  	<time datetime="2016-09-26T15:29:43.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-26</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活随笔/">生活随笔</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-自己的心理状态" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          四旋翼学习(一)
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/21/自己的心理状态/">自己的心理状态</a>
-    </h1>
   
+    <a href="/2016/09/26/9月26日/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">9月26日</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近的事也相对而言算多，至少自己心里这么觉得。归根到底还是因为自己的心理状态不好吧可能。</p>
-<p>自从决定要跟实验室的几个抱团学java后，看java视频肯定是必须的了，马上就轮要到自己找工作了，从头开始学习已经很晚了，所以必须看快点。其实坐在那看视频挺有意思的，但怎么可能能一直看呢，总归有这些那些的事需要去做。比如：上课。因为感觉自己要学习java了，便觉得再也不想看那些cpu、存储器等东西了，奈何这学期计算机底层的课程太多了，这也没办法，毕竟计科。上课也听不下去，主要老师讲的也没意思。</p>
-<p>现在大三了，还在大活兼职，想着再待半年，学学上一任组长，大三下再走，顺便把报健身房的钱挣回来，但实在有点占用时间，时不时就要值班，占着我为数不多的时间，也有人说挣着钱呢有啥，那我也无话可说。再加上自己心里的些许负担，确实有点累。</p>
-<p>前几天，暑假一块社会实践的人想着再聚一次会，内心是抵触的，因为自己不喜欢那些场合，再加上他们一个个都那么厉害，自己跟他们一起也不合群。自己不是那种谈天说地的人，一块社会实践也没跟他们融到一起，可能因为虽然自己代表大活，却不是社团骨干内心深处有些许自卑吧。然而自己一直就是那种放不开的人。想着聚会可能会很尴尬，其他人抱团聊天，自己傻傻地看别人聊天是多么难受。抗拒归抗拒，自己却也随口答应了下来，毕竟帅哥打的电话。这几天一想到这件事情，就不想放假。只能安慰自己，要勇于去做那些不敢做的事。其实也是不想去喝酒，自从上次实验室聚会喝难受以后。</p>
-<p>报了健身房最近却也因为没空去，懒，没去。对了，实验室的四旋翼也等着做呢，毕竟也会是找工作的一个筹码，至于明年会不会参加电赛就要看找实习情况了，估计也是会参加的。综测成绩也即将出来，估计是拿不了励志奖学金了，这次拿不了，大学四年估计一次也拿不了啦，也无所谓，毕竟自己是否努力了只有自己清楚。</p>
-<p>没错，这些事让我不能抽出时间一直学习java，真想赶紧学完基础好进阶做项目。</p>
-<p>其实，自己的内心才是最重要的。大学两年已经过去了，真正的知心朋友是一个没有吧，真羡慕其他人。为什么呢？不能说认识的人少，但从来没有真正用心去交一个朋友，若能像那个高中同学一样就好了。就算跟舍友也没有走得特别近，毕竟除了晚上也不常在一块，这可能只是一部分原因吧。还是不用心。曾经也希望成为那种可以呼朋唤友的人啊。</p>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/21/自己的心理状态/" class="archive-article-date">
-  	<time datetime="2016-09-21T15:21:09.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-21</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活随笔/">生活随笔</a></li></ul>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
@@ -351,63 +229,6 @@
 
 
 
-
-
-
-  
-    <article id="post-hexo-github-pages博客搭建记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/20/hexo-github-pages博客搭建记录/">hexo+github pages博客搭建记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>主要记录了根据hexo和github pages搭建博客的过程。<br>
-        <p class="article-more-link">
-          <a  href="/2016/09/20/hexo-github-pages博客搭建记录/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/20/hexo-github-pages博客搭建记录/" class="archive-article-date">
-  	<time datetime="2016-09-20T01:30:34.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-20</time>
-</a>
-      
-      
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/github/">github</a>
-	</div>
-
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-  
 
 
       </div>
@@ -436,8 +257,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
