@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>四旋翼学习(一) | coding the world</title>
+  <title>LeetCode刷题题_2 | coding the world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="四旋翼原理简单介绍基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。">
+  <meta name="description" content="第二道Reverse digits of an integer.
+Example1: x = 123, return 321Example2: x = -123, return -321click to show spoilers.Have you thought about this?Here are some good questions to ask before coding. Bonus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="四旋翼学习(一)">
-<meta property="og:url" content="http://yoursite.com/2016/09/28/四旋翼学习-一/index.html">
+<meta property="og:title" content="LeetCode刷题题_2">
+<meta property="og:url" content="http://yoursite.com/2016/09/29/LeetCode刷题题-2/index.html">
 <meta property="og:site_name" content="coding the world">
-<meta property="og:description" content="四旋翼原理简单介绍基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。">
-<meta property="og:updated_time" content="2016-09-28T16:14:14.140Z">
+<meta property="og:description" content="第二道Reverse digits of an integer.
+Example1: x = 123, return 321Example2: x = -123, return -321click to show spoilers.Have you thought about this?Here are some good questions to ask before coding. Bonus">
+<meta property="og:updated_time" content="2016-09-29T15:47:50.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="四旋翼学习(一)">
-<meta name="twitter:description" content="四旋翼原理简单介绍基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。">
+<meta name="twitter:title" content="LeetCode刷题题_2">
+<meta name="twitter:description" content="第二道Reverse digits of an integer.
+Example1: x = 123, return 321Example2: x = -123, return -321click to show spoilers.Have you thought about this?Here are some good questions to ask before coding. Bonus">
   
     <link rel="alternative" href="/atom.xml" title="coding the world" type="application/atom+xml">
   
@@ -138,7 +141,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-四旋翼学习-一" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-LeetCode刷题题-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -148,7 +151,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      四旋翼学习(一)
+      LeetCode刷题题_2
     </h1>
   
 
@@ -156,23 +159,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="四旋翼原理简单介绍"><a href="#四旋翼原理简单介绍" class="headerlink" title="四旋翼原理简单介绍"></a>四旋翼原理简单介绍</h3><p>基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。<br>四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。</p>
-<p>升降：飞机放在地上，四个旋翼开始旋转，当提供的升力比它本身的重力大时，四旋翼就可以平稳的升起了，下降同理。<br>前后飞行：某一方向两个旋翼转速不变，前进的方向上，一个旋翼加速，另一个减速，飞机就会与地面有一个夹角，这就可以使飞机有向前的动力，至于偏的角度还是需要控制的。<br>俯仰与翻滚同理。偏航暂时不管。</p>
-<h3 id="mpu6050在四旋翼中的应用"><a href="#mpu6050在四旋翼中的应用" class="headerlink" title="mpu6050在四旋翼中的应用"></a>mpu6050在四旋翼中的应用</h3><p>mpu6050集成了一个三轴加速度传感器、三轴角速度传感器以及一个数字运动处理单元DMP。我们可以通过mpu获得飞机当前在三个方向加速度及角速度，我们可以通过内置的DMP将其转换为四元数，进而转换为俯仰角、翻滚角、航向角。当然也不止四元数一个方法。</p>
-<p>要想让飞机保持平衡，在它有一定倾角后，需要改变电机转速。对比于平衡车，电机的控制应该需要三个角及三个方向上的角速度。比如：飞机前倾了一定角度，要想让它平衡就需要后边的电机加速，至于怎么加速：倾斜角度大，就需要转速加的多，倾斜角度减小后，转速就需要加的慢。我们需要适当减小角速度对电机转速的影响:即角速度越快，越需要减慢电机的变化。简易公式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwm = 角度*kp+角速度*kd  //kp较大 kd小于1</div></pre></td></tr></table></figure></p>
-<p>后边慢慢补充吧，如果文章中理解错了以后再改。</p>
+        <h3 id="第二道"><a href="#第二道" class="headerlink" title="第二道"></a>第二道</h3><p>Reverse digits of an integer.</p>
+<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br>click to show spoilers.<br>Have you thought about this?<br>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!<br>If the integer’s last digit is 0, what should the output be? ie, cases such as 10, 100.<br>Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?<br>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.<br>一看反转整数，两种思路：</p>
+<ul>
+<li>循环把整数取余再除以10，将每一个结果存起来，最后化为整数，相当麻烦呀。</li>
+<li>利用java的字符串和整数互相转换求得结果，似乎可以。<br>提交错误，发现大数无法转化成功，原来发生了溢出，整数本来没有溢出，反过来确溢出了。。各种改进后代码如下：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">		 </div><div class="line">		 	<span class="keyword">if</span>(x == -<span class="number">2147483648</span>)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	        String s = <span class="string">""</span>;</div><div class="line">	        <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</div><div class="line">	        &#123;</div><div class="line">	        	s = <span class="string">"-"</span>;</div><div class="line">	        	x = -x;</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">if</span>(x == <span class="number">0</span>)&#123;</div><div class="line">	            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</div><div class="line">	            s += x % <span class="number">10</span>;</div><div class="line">	            x /= <span class="number">10</span>;</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">if</span> (s.compareTo(<span class="string">"-2147483648"</span>)&gt;<span class="number">0</span> || s.compareTo(<span class="string">"2147483647"</span>)&gt;<span class="number">0</span>)</div><div class="line">	            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	        <span class="keyword">return</span> Integer.parseInt(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>结果依旧不正确，给1时结果为0.<br>百度得到大神做法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sign = <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(x &lt; <span class="number">0</span>)&#123;</div><div class="line">        sign = -<span class="number">1</span>;</div><div class="line">        x *= -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">long</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(x != <span class="number">0</span>)&#123;</div><div class="line">        result = result * <span class="number">10</span> + x % <span class="number">10</span>;</div><div class="line">        <span class="keyword">if</span>(sign * result &gt; Integer.MAX_VALUE ||</div><div class="line">                sign * result &lt; Integer.MIN_VALUE)</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        x = x / <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)result * sign;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>总结：任何一道题都要细心做，考虑每一种情况，一定要冷静快速，不要拖拖拉拉。</p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/28/四旋翼学习-一/" class="archive-article-date">
-  	<time datetime="2016-09-28T15:17:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-28</time>
+      <a href="/2016/09/29/LeetCode刷题题-2/" class="archive-article-date">
+  	<time datetime="2016-09-29T15:26:42.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-29</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/四旋翼/">四旋翼</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
 	</div>
 
       
@@ -185,18 +192,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/09/29/Java-String的简单学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java String的简单学习
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/28/LeetCode刷题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LeetCode刷题</div>
+    <a href="/2016/09/29/Java-String的简单学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java String的简单学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -319,7 +317,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/JavaString/" style="font-size: 10px;">JavaString</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/四旋翼/" style="font-size: 10px;">四旋翼</a> <a href="/tags/生活随笔/" style="font-size: 15px;">生活随笔</a>
+    				<a href="/tags/JavaString/" style="font-size: 10px;">JavaString</a> <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/四旋翼/" style="font-size: 10px;">四旋翼</a> <a href="/tags/生活随笔/" style="font-size: 20px;">生活随笔</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
     			</div>
     	</section>
     

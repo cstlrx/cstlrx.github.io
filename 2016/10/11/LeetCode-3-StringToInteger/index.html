@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>四旋翼学习(一) | coding the world</title>
+  <title>LeetCode-3 StringToInteger | coding the world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="四旋翼原理简单介绍基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。">
+  <meta name="description" content="##要求：The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or min">
 <meta property="og:type" content="article">
-<meta property="og:title" content="四旋翼学习(一)">
-<meta property="og:url" content="http://yoursite.com/2016/09/28/四旋翼学习-一/index.html">
+<meta property="og:title" content="LeetCode-3 StringToInteger">
+<meta property="og:url" content="http://yoursite.com/2016/10/11/LeetCode-3-StringToInteger/index.html">
 <meta property="og:site_name" content="coding the world">
-<meta property="og:description" content="四旋翼原理简单介绍基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。">
-<meta property="og:updated_time" content="2016-09-28T16:14:14.140Z">
+<meta property="og:description" content="##要求：The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or min">
+<meta property="og:updated_time" content="2016-10-11T13:43:45.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="四旋翼学习(一)">
-<meta name="twitter:description" content="四旋翼原理简单介绍基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。">
+<meta name="twitter:title" content="LeetCode-3 StringToInteger">
+<meta name="twitter:description" content="##要求：The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or min">
   
     <link rel="alternative" href="/atom.xml" title="coding the world" type="application/atom+xml">
   
@@ -138,7 +138,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-四旋翼学习-一" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-LeetCode-3-StringToInteger" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -148,7 +148,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      四旋翼学习(一)
+      LeetCode-3 StringToInteger
     </h1>
   
 
@@ -156,23 +156,73 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="四旋翼原理简单介绍"><a href="#四旋翼原理简单介绍" class="headerlink" title="四旋翼原理简单介绍"></a>四旋翼原理简单介绍</h3><p>基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。<br>四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。</p>
-<p>升降：飞机放在地上，四个旋翼开始旋转，当提供的升力比它本身的重力大时，四旋翼就可以平稳的升起了，下降同理。<br>前后飞行：某一方向两个旋翼转速不变，前进的方向上，一个旋翼加速，另一个减速，飞机就会与地面有一个夹角，这就可以使飞机有向前的动力，至于偏的角度还是需要控制的。<br>俯仰与翻滚同理。偏航暂时不管。</p>
-<h3 id="mpu6050在四旋翼中的应用"><a href="#mpu6050在四旋翼中的应用" class="headerlink" title="mpu6050在四旋翼中的应用"></a>mpu6050在四旋翼中的应用</h3><p>mpu6050集成了一个三轴加速度传感器、三轴角速度传感器以及一个数字运动处理单元DMP。我们可以通过mpu获得飞机当前在三个方向加速度及角速度，我们可以通过内置的DMP将其转换为四元数，进而转换为俯仰角、翻滚角、航向角。当然也不止四元数一个方法。</p>
-<p>要想让飞机保持平衡，在它有一定倾角后，需要改变电机转速。对比于平衡车，电机的控制应该需要三个角及三个方向上的角速度。比如：飞机前倾了一定角度，要想让它平衡就需要后边的电机加速，至于怎么加速：倾斜角度大，就需要转速加的多，倾斜角度减小后，转速就需要加的慢。我们需要适当减小角速度对电机转速的影响:即角速度越快，越需要减慢电机的变化。简易公式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwm = 角度*kp+角速度*kd  //kp较大 kd小于1</div></pre></td></tr></table></figure></p>
-<p>后边慢慢补充吧，如果文章中理解错了以后再改。</p>
+        <p>##要求：<br>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
+<p>The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
+<p>If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.</p>
+<p>If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.</p>
+<p>Subscribe to see which companies asked this question</p>
+<p>做这道题总共花了三段时间，绝对花了5个小时以上了。</p>
+<ol>
+<li>第一次没看题目的以上介绍，直接写代码，失败是必然的。</li>
+<li>第二次用java的正则表达式还是总有一些用例出不来。</li>
+<li><p>第三次逐个字符判断，不断尝试才解决了所有的用例。<br>经过这些也明白了只有先动脑再动手才能在最短的时间里AC，毕竟不考虑所有情况只是瞎写只是浪费时间罢了。另外算法题尽量不要用java里已经现成的东西，最好像C语言一样从头开始，因为已经写好的东西可能并不适合题的情况。就像正则表达式在这道题里一样。<br>代码如下：<br>`<br>/**</p>
+<ul>
+<li><p>@author lrx 2016年10月11日下午7:29:07<br>*/<br>public class MyAtoi2 {<br>public static int myAtoi(String str) {<br>   double result = 0;<br>   char symbols = ‘+’;<br>   str = str.trim();// 去空格<br>   if (str.length() == 0) {</p>
+<pre><code>return 0;
+</code></pre><p>   }<br>   char[] array = str.toCharArray();<br>   /*</p>
+<pre><code>* if (array[0] == &apos;-&apos;) {// 确定符号//若数组长度为0 则越界异常 symbols = &apos;-&apos;; }
+*/
+</code></pre><p>   /*</p>
+<pre><code>* while (j &lt; str.length() &amp;&amp; (array[j] == &apos;+&apos; || array[j] == &apos;-&apos;)) { if
+* (array[j] != symbols) { return 0; } j++; continue; }
+*/
+</code></pre><p>   int j = 0;<br>   if (array[j] == ‘+’) {</p>
+<pre><code>j++;
+</code></pre><p>   } else if (array[j] == ‘-‘) {</p>
+<pre><code>j++;
+symbols = &apos;-&apos;;
+</code></pre><p>   }<br>   // System.out.println(symbols);<br>   // result = (symbols == ‘+’) ? result : -result;<br>   // System.out.println(result);<br>   for (int i = j; i &lt; str.length(); i++) {</p>
+<pre><code>char temp = array[i];
+/*
+ * if (temp == &apos;+&apos; || temp == &apos;-&apos;) {// 应对++++5 ---+-4这些情况 if (temp
+ * != symbols) { return 0; } continue; } result = (symbols == &apos;+&apos;) ?
+ * result : -result;// 符号判断结束给result加上符号!!这条语句会随着循环一直执行，出错
+ */
+// System.out.println(result);
+if (temp &gt;= &apos;0&apos; &amp;&amp; temp &lt;= &apos;9&apos;) {
+    result = result * 10 + (temp - &apos;0&apos;);
+    // result = result * 10 + symbols*(temp - &apos;0&apos;);//直接带上符号
+    if ((symbols == &apos;+&apos;) &amp;&amp; result &gt; Integer.MAX_VALUE) {// &quot;-2147483648&quot;出错，因为比较时没带符号，故上边给result加上符号
+        // return Integer.MAX_VALUE;
+        result = Integer.MAX_VALUE;
+    }
+    if ((symbols == &apos;-&apos;) &amp;&amp; result &lt; Integer.MIN_VALUE) {
+        // return Integer.MIN_VALUE;使代码有统一出口
+        result = Integer.MIN_VALUE;
+    }
+    // System.out.println(result);
+} else {
+    break;// 遇见非数字结束返回当前值//代码的另一个出口
+}
+</code></pre><p>   }<br>   result = (symbols == ‘+’) ? result : -result;<br>   // System.out.println(symbols);<br>   // return (symbols == ‘+’) ? (int) result : -(int) result;<br>   return (int) result;<br>}</p>
+<p>public static void main(String[] args) {</p>
+<p>   // String str = “-123”;忘加符号<br>   // String str = “ -0018a42”;<br>   // String str = “+”;<br>   // String str = “-2147483648”;<br>   String str = “ –1”;<br>   System.out.println(myAtoi(str));<br>}<br>}// 9：13<br>`</p>
+</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/28/四旋翼学习-一/" class="archive-article-date">
-  	<time datetime="2016-09-28T15:17:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-28</time>
+      <a href="/2016/10/11/LeetCode-3-StringToInteger/" class="archive-article-date">
+  	<time datetime="2016-10-11T13:28:19.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-11</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/四旋翼/">四旋翼</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
 	</div>
 
       
@@ -185,18 +235,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/09/29/Java-String的简单学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java String的简单学习
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/28/LeetCode刷题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LeetCode刷题</div>
+    <a href="/2016/09/29/LeetCode刷题-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode刷题_2</div>
       <i class="icon-circle-right"></i>
     </a>
   
