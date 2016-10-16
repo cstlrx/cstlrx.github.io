@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>LeetCode刷题题_2 | coding the world</title>
+  <title>LeetCode刷题_2 | coding the world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="第二道Reverse digits of an integer.
 Example1: x = 123, return 321Example2: x = -123, return -321click to show spoilers.Have you thought about this?Here are some good questions to ask before coding. Bonus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode刷题题_2">
+<meta property="og:title" content="LeetCode刷题_2">
 <meta property="og:url" content="http://yoursite.com/2016/09/29/LeetCode刷题题-2/index.html">
 <meta property="og:site_name" content="coding the world">
 <meta property="og:description" content="第二道Reverse digits of an integer.
 Example1: x = 123, return 321Example2: x = -123, return -321click to show spoilers.Have you thought about this?Here are some good questions to ask before coding. Bonus">
-<meta property="og:updated_time" content="2016-09-29T15:47:50.678Z">
+<meta property="og:updated_time" content="2016-10-13T09:15:29.023Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode刷题题_2">
+<meta name="twitter:title" content="LeetCode刷题_2">
 <meta name="twitter:description" content="第二道Reverse digits of an integer.
 Example1: x = 123, return 321Example2: x = -123, return -321click to show spoilers.Have you thought about this?Here are some good questions to ask before coding. Bonus">
   
@@ -151,7 +151,7 @@ Example1: x = 123, return 321Example2: x = -123, return -321click to show spoile
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode刷题题_2
+      LeetCode刷题_2
     </h1>
   
 
@@ -160,14 +160,15 @@ Example1: x = 123, return 321Example2: x = -123, return -321click to show spoile
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="第二道"><a href="#第二道" class="headerlink" title="第二道"></a>第二道</h3><p>Reverse digits of an integer.</p>
-<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br>click to show spoilers.<br>Have you thought about this?<br>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!<br>If the integer’s last digit is 0, what should the output be? ie, cases such as 10, 100.<br>Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?<br>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.<br>一看反转整数，两种思路：</p>
-<ul>
+<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br>click to show spoilers.<br>Have you thought about this?<br>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!<br>If the integer’s last digit is 0, what should the output be? ie, cases such as 10, 100.<br>Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?<br>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+<p>一看反转整数，两种思路：</p>
+<ol>
 <li>循环把整数取余再除以10，将每一个结果存起来，最后化为整数，相当麻烦呀。</li>
-<li>利用java的字符串和整数互相转换求得结果，似乎可以。<br>提交错误，发现大数无法转化成功，原来发生了溢出，整数本来没有溢出，反过来确溢出了。。各种改进后代码如下：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">		 </div><div class="line">		 	<span class="keyword">if</span>(x == -<span class="number">2147483648</span>)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	        String s = <span class="string">""</span>;</div><div class="line">	        <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</div><div class="line">	        &#123;</div><div class="line">	        	s = <span class="string">"-"</span>;</div><div class="line">	        	x = -x;</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">if</span>(x == <span class="number">0</span>)&#123;</div><div class="line">	            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</div><div class="line">	            s += x % <span class="number">10</span>;</div><div class="line">	            x /= <span class="number">10</span>;</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">if</span> (s.compareTo(<span class="string">"-2147483648"</span>)&gt;<span class="number">0</span> || s.compareTo(<span class="string">"2147483647"</span>)&gt;<span class="number">0</span>)</div><div class="line">	            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	        <span class="keyword">return</span> Integer.parseInt(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>结果依旧不正确，给1时结果为0.<br>百度得到大神做法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sign = <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(x &lt; <span class="number">0</span>)&#123;</div><div class="line">        sign = -<span class="number">1</span>;</div><div class="line">        x *= -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">long</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(x != <span class="number">0</span>)&#123;</div><div class="line">        result = result * <span class="number">10</span> + x % <span class="number">10</span>;</div><div class="line">        <span class="keyword">if</span>(sign * result &gt; Integer.MAX_VALUE ||</div><div class="line">                sign * result &lt; Integer.MIN_VALUE)</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        x = x / <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)result * sign;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>总结：任何一道题都要细心做，考虑每一种情况，一定要冷静快速，不要拖拖拉拉。</p>
+<li>利用java的字符串和整数互相转换求得结果，似乎可以。</li>
+</ol>
+<p>提交错误，发现大数无法转化成功，原来发生了溢出，整数本来没有溢出，反过来确溢出了。。各种改进后代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">		 </div><div class="line">	<span class="keyword">if</span>(x == -<span class="number">2147483648</span>)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	String s = <span class="string">""</span>;</div><div class="line">	<span class="keyword">if</span> (x &lt; <span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		s = <span class="string">"-"</span>;</div><div class="line">	    x = -x;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(x == <span class="number">0</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</div><div class="line">        s += x % <span class="number">10</span>;</div><div class="line">        x /= <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (s.compareTo(<span class="string">"-2147483648"</span>)&gt;<span class="number">0</span> || s.compareTo(<span class="string">"2147483647"</span>)&gt;<span class="number">0</span>)</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">return</span> Integer.parseInt(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果依旧不正确，给1时结果为0.<br>百度得到大神做法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sign = <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(x &lt; <span class="number">0</span>)&#123;</div><div class="line">        sign = -<span class="number">1</span>;</div><div class="line">        x *= -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">long</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(x != <span class="number">0</span>)&#123;</div><div class="line">        result = result * <span class="number">10</span> + x % <span class="number">10</span>;</div><div class="line">        <span class="keyword">if</span>(sign * result &gt; Integer.MAX_VALUE ||</div><div class="line">                sign * result &lt; Integer.MIN_VALUE)</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        x = x / <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)result * sign;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>差距！<br>总结：任何一道题都要细心做，考虑每一种情况，一定要冷静快速，不要拖拖拉拉。</p>
 
       
     </div>
@@ -191,6 +192,15 @@ Example1: x = 123, return 321Example2: x = -123, return -321click to show spoile
 
   
 <nav id="article-nav">
+  
+    <a href="/2016/09/29/LeetCode刷题-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          LeetCode刷题_2
+        
+      </div>
+    </a>
   
   
     <a href="/2016/09/29/Java-String的简单学习/" id="article-nav-older" class="article-nav-link-wrap">
@@ -317,7 +327,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/JavaString/" style="font-size: 10px;">JavaString</a> <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/四旋翼/" style="font-size: 10px;">四旋翼</a> <a href="/tags/生活随笔/" style="font-size: 20px;">生活随笔</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    				<a href="/tags/JavaString/" style="font-size: 10px;">JavaString</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/四旋翼/" style="font-size: 10px;">四旋翼</a> <a href="/tags/生活随笔/" style="font-size: 15px;">生活随笔</a>
     			</div>
     	</section>
     

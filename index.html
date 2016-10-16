@@ -139,6 +139,58 @@
       <div class="body-wrap">
         
   
+    <article id="post-人生苦短" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/14/人生苦短/">人生苦短</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="常怀感恩之心"><a href="#常怀感恩之心" class="headerlink" title="常怀感恩之心"></a>常怀感恩之心</h2><p></p><p> 晚上，弟弟给开语音，说爸爸给我qq聊天我都不知道问问家里的事，只是说“知道”，气的手机直接扔了，虽然没这么严重，但我心里还是很难受，仔细想想，确实自己很少关心家里的事。<br>外边刚下完雨，难受时总喜欢在操场走一走，操场上只有一个女生走在自己的前面，给这个夜晚来了一点点朦胧的美。双手插兜，阵阵冷风吹得我身体发寒，自己很久以来一直把父母的爱、父母的关心当作理所当然，从来没有想过自己身边的所有都是父母给予的啊，也很少去过问家里的事，只是单纯的过着自己的生活，为了自己。要知道亲情是这个世界上最重要的东西呀，自己却忽略了。所以，学会感恩，感谢父母给予自己的一切。<br>也意识到自己不会想神灵一样拥有永久的生命，时间过得很快，就算自己能活八十岁，自己生命的四分之一时间也已经过去了，自己在这一生中会遇到很多的病痛、死亡，想到这些竟感到一丝恐惧，确实我害怕，我害怕我的亲人离我而去，我也害怕离开这个世界，然而自己唯一可以做的就是珍惜每一天，珍惜每一分每一秒，珍惜这个世界。长大有什么好呢。干嘛急着找工作呢。<br></p><p></p>
+<hr>
+<h2 id="改变"><a href="#改变" class="headerlink" title="改变"></a>改变</h2><p>最近这段日子，有着很多的不被肯定，老师的不肯定，同学的不肯定。除了低调以外，最大的原因还是自己不肯努力呀。晚上王老师说我太秀气，像个女生，说话声音小。这可能也是因为有着深层次的原因吧，不自信也是最大的原因，内心太脆弱，还怕影响别人，总是喜欢隐藏自己的小秘密等等。总之自己需要改变呀，毕竟人生苦短，此时不改，更待何时呀。怎么说自己也是实验室的班长，至少得做出榜样吧，最近是有点迷了。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/14/人生苦短/" class="archive-article-date">
+  	<time datetime="2016-10-14T12:42:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-14</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活随笔/">生活随笔</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-LeetCode-3-StringToInteger" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -157,7 +209,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##要求：<br>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
+        <h2 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h2><p>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
 <p>The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
 <p>If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.</p>
 <p>If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.</p>
@@ -166,51 +218,7 @@
 <ol>
 <li>第一次没看题目的以上介绍，直接写代码，失败是必然的。</li>
 <li>第二次用java的正则表达式还是总有一些用例出不来。</li>
-<li><p>第三次逐个字符判断，不断尝试才解决了所有的用例。<br>经过这些也明白了只有先动脑再动手才能在最短的时间里AC，毕竟不考虑所有情况只是瞎写只是浪费时间罢了。另外算法题尽量不要用java里已经现成的东西，最好像C语言一样从头开始，因为已经写好的东西可能并不适合题的情况。就像正则表达式在这道题里一样。<br>代码如下：<br>`<br>/**</p>
-<ul>
-<li><p>@author lrx 2016年10月11日下午7:29:07<br>*/<br>public class MyAtoi2 {<br>public static int myAtoi(String str) {<br>   double result = 0;<br>   char symbols = ‘+’;<br>   str = str.trim();// 去空格<br>   if (str.length() == 0) {</p>
-<pre><code>return 0;
-</code></pre><p>   }<br>   char[] array = str.toCharArray();<br>   /*</p>
-<pre><code>* if (array[0] == &apos;-&apos;) {// 确定符号//若数组长度为0 则越界异常 symbols = &apos;-&apos;; }
-*/
-</code></pre><p>   /*</p>
-<pre><code>* while (j &lt; str.length() &amp;&amp; (array[j] == &apos;+&apos; || array[j] == &apos;-&apos;)) { if
-* (array[j] != symbols) { return 0; } j++; continue; }
-*/
-</code></pre><p>   int j = 0;<br>   if (array[j] == ‘+’) {</p>
-<pre><code>j++;
-</code></pre><p>   } else if (array[j] == ‘-‘) {</p>
-<pre><code>j++;
-symbols = &apos;-&apos;;
-</code></pre><p>   }<br>   // System.out.println(symbols);<br>   // result = (symbols == ‘+’) ? result : -result;<br>   // System.out.println(result);<br>   for (int i = j; i &lt; str.length(); i++) {</p>
-<pre><code>char temp = array[i];
-/*
- * if (temp == &apos;+&apos; || temp == &apos;-&apos;) {// 应对++++5 ---+-4这些情况 if (temp
- * != symbols) { return 0; } continue; } result = (symbols == &apos;+&apos;) ?
- * result : -result;// 符号判断结束给result加上符号!!这条语句会随着循环一直执行，出错
- */
-// System.out.println(result);
-if (temp &gt;= &apos;0&apos; &amp;&amp; temp &lt;= &apos;9&apos;) {
-    result = result * 10 + (temp - &apos;0&apos;);
-    // result = result * 10 + symbols*(temp - &apos;0&apos;);//直接带上符号
-    if ((symbols == &apos;+&apos;) &amp;&amp; result &gt; Integer.MAX_VALUE) {// &quot;-2147483648&quot;出错，因为比较时没带符号，故上边给result加上符号
-        // return Integer.MAX_VALUE;
-        result = Integer.MAX_VALUE;
-    }
-    if ((symbols == &apos;-&apos;) &amp;&amp; result &lt; Integer.MIN_VALUE) {
-        // return Integer.MIN_VALUE;使代码有统一出口
-        result = Integer.MIN_VALUE;
-    }
-    // System.out.println(result);
-} else {
-    break;// 遇见非数字结束返回当前值//代码的另一个出口
-}
-</code></pre><p>   }<br>   result = (symbols == ‘+’) ? result : -result;<br>   // System.out.println(symbols);<br>   // return (symbols == ‘+’) ? (int) result : -(int) result;<br>   return (int) result;<br>}</p>
-<p>public static void main(String[] args) {</p>
-<p>   // String str = “-123”;忘加符号<br>   // String str = “ -0018a42”;<br>   // String str = “+”;<br>   // String str = “-2147483648”;<br>   String str = “ –1”;<br>   System.out.println(myAtoi(str));<br>}<br>}// 9：13<br>`</p>
-</li>
-</ul>
-</li>
+<li>第三次逐个字符判断，不断尝试才解决了所有的用例。<br>经过这些也明白了只有先动脑再动手才能在最短的时间里AC，毕竟不考虑所有情况只是瞎写只是浪费时间罢了。另外算法题尽量不要用java里已经现成的东西，最好像C语言一样从头开始，因为已经写好的东西可能并不适合题的情况。就像正则表达式在这道题里一样。<br>代码如下：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * <span class="doctag">@author</span> lrx 2016年10月11日下午7:29:07</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAtoi2</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(String str)</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span> result = <span class="number">0</span>;</div><div class="line">		<span class="keyword">char</span> symbols = <span class="string">'+'</span>;</div><div class="line">		str = str.trim();<span class="comment">// 去空格</span></div><div class="line">		<span class="keyword">if</span> (str.length() == <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">char</span>[] array = str.toCharArray();</div><div class="line">		<span class="comment">/*</span></div><div class="line">		 * if (array[0] == '-') &#123;// 确定符号//若数组长度为0 则越界异常 symbols = '-'; &#125;</div><div class="line">		 */</div><div class="line">		<span class="comment">/*</span></div><div class="line">		 * while (j &lt; str.length() &amp;&amp; (array[j] == '+' || array[j] == '-')) &#123; if</div><div class="line">		 * (array[j] != symbols) &#123; return 0; &#125; j++; continue; &#125;</div><div class="line">		 */</div><div class="line">		<span class="keyword">int</span> j = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (array[j] == <span class="string">'+'</span>) &#123;</div><div class="line">			j++;</div><div class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[j] == <span class="string">'-'</span>) &#123;</div><div class="line">			j++;</div><div class="line">			symbols = <span class="string">'-'</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = j; i &lt; str.length(); i++) &#123;</div><div class="line">			<span class="keyword">char</span> temp = array[i];</div><div class="line">			</div><div class="line">			<span class="comment">// System.out.println(result);</span></div><div class="line">			<span class="keyword">if</span> (temp &gt;= <span class="string">'0'</span> &amp;&amp; temp &lt;= <span class="string">'9'</span>) &#123;</div><div class="line">				result = result * <span class="number">10</span> + (temp - <span class="string">'0'</span>);</div><div class="line">				<span class="comment">// result = result * 10 + symbols*(temp - '0');//直接带上符号</span></div><div class="line">				<span class="keyword">if</span> ((symbols == <span class="string">'+'</span>) &amp;&amp; result &gt; Integer.MAX_VALUE) &#123;<span class="comment">// "-2147483648"出错，因为比较时没带符号，故上边给result加上符号</span></div><div class="line">					<span class="comment">// return Integer.MAX_VALUE;</span></div><div class="line">					result = Integer.MAX_VALUE;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span> ((symbols == <span class="string">'-'</span>) &amp;&amp; result &lt; Integer.MIN_VALUE) &#123;</div><div class="line">					<span class="comment">// return Integer.MIN_VALUE;使代码有统一出口</span></div><div class="line">					result = Integer.MIN_VALUE;</div><div class="line">				&#125;</div><div class="line">				<span class="comment">// System.out.println(result);</span></div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				<span class="keyword">break</span>;<span class="comment">// 遇见非数字结束返回当前值//代码的另一个出口</span></div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		result = (symbols == <span class="string">'+'</span>) ? result : -result;</div><div class="line">		<span class="comment">// System.out.println(symbols);</span></div><div class="line">		<span class="comment">// return (symbols == '+') ? (int) result : -(int) result;</span></div><div class="line">		<span class="keyword">return</span> (<span class="keyword">int</span>) result;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">		<span class="comment">// String str = "-123";忘加符号</span></div><div class="line">		<span class="comment">// String str = " -0018a42";</span></div><div class="line">		<span class="comment">// String str = "+";</span></div><div class="line">		<span class="comment">// String str = "-2147483648";</span></div><div class="line">		String str = <span class="string">" --1"</span>;</div><div class="line">		System.out.println(myAtoi(str));</div><div class="line">	&#125;</div><div class="line">&#125;<span class="comment">// 9：13</span></div></pre></td></tr></table></figure></li>
 </ol>
 
       
@@ -277,6 +285,65 @@ if (temp &gt;= &apos;0&apos; &amp;&amp; temp &lt;= &apos;9&apos;) {
     <div class="article-info article-info-index">
       
       <a href="/2016/09/29/LeetCode刷题-2/" class="archive-article-date">
+  	<time datetime="2016-09-29T15:26:42.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-29</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-LeetCode刷题题-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/29/LeetCode刷题题-2/">LeetCode刷题_2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="第二道"><a href="#第二道" class="headerlink" title="第二道"></a>第二道</h3><p>Reverse digits of an integer.</p>
+<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br>click to show spoilers.<br>Have you thought about this?<br>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!<br>If the integer’s last digit is 0, what should the output be? ie, cases such as 10, 100.<br>Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?<br>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+<p>一看反转整数，两种思路：</p>
+<ol>
+<li>循环把整数取余再除以10，将每一个结果存起来，最后化为整数，相当麻烦呀。</li>
+<li>利用java的字符串和整数互相转换求得结果，似乎可以。</li>
+</ol>
+<p>提交错误，发现大数无法转化成功，原来发生了溢出，整数本来没有溢出，反过来确溢出了。。各种改进后代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">		 </div><div class="line">	<span class="keyword">if</span>(x == -<span class="number">2147483648</span>)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	String s = <span class="string">""</span>;</div><div class="line">	<span class="keyword">if</span> (x &lt; <span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		s = <span class="string">"-"</span>;</div><div class="line">	    x = -x;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(x == <span class="number">0</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</div><div class="line">        s += x % <span class="number">10</span>;</div><div class="line">        x /= <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (s.compareTo(<span class="string">"-2147483648"</span>)&gt;<span class="number">0</span> || s.compareTo(<span class="string">"2147483647"</span>)&gt;<span class="number">0</span>)</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">return</span> Integer.parseInt(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果依旧不正确，给1时结果为0.<br>百度得到大神做法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> sign = <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(x &lt; <span class="number">0</span>)&#123;</div><div class="line">        sign = -<span class="number">1</span>;</div><div class="line">        x *= -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">long</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(x != <span class="number">0</span>)&#123;</div><div class="line">        result = result * <span class="number">10</span> + x % <span class="number">10</span>;</div><div class="line">        <span class="keyword">if</span>(sign * result &gt; Integer.MAX_VALUE ||</div><div class="line">                sign * result &lt; Integer.MIN_VALUE)</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        x = x / <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)result * sign;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>差距！<br>总结：任何一道题都要细心做，考虑每一种情况，一定要冷静快速，不要拖拖拉拉。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/29/LeetCode刷题题-2/" class="archive-article-date">
   	<time datetime="2016-09-29T15:26:42.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-29</time>
 </a>
       
