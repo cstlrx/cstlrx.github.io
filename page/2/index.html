@@ -139,6 +139,114 @@
       <div class="body-wrap">
         
   
+    <article id="post-四旋翼学习-一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/28/四旋翼学习-一/">四旋翼学习(一)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="四旋翼原理简单介绍"><a href="#四旋翼原理简单介绍" class="headerlink" title="四旋翼原理简单介绍"></a>四旋翼原理简单介绍</h3><p>基本的四旋翼飞机由电池、电子调速器、电机、机架、飞控板及平衡模块等构成。电调自然是控制电机的，飞控板则作为主要的控制中心。那么它是如何飞起来的呢，四个旋翼提供了升力，至于如何控制就是其他模块的事了。四个旋翼中相对着的旋翼旋转方向相同，另外的两个旋转方向相反。这样做是为了消除旋翼旋转过程中对空气产生的作用力。<br>四旋翼有两种飞行方式，十字形和叉形。仅仅控制电机方式不同。下面介绍十字形。</p>
+<p>升降：飞机放在地上，四个旋翼开始旋转，当提供的升力比它本身的重力大时，四旋翼就可以平稳的升起了，下降同理。<br>前后飞行：某一方向两个旋翼转速不变，前进的方向上，一个旋翼加速，另一个减速，飞机就会与地面有一个夹角，这就可以使飞机有向前的动力，至于偏的角度还是需要控制的。<br>俯仰与翻滚同理。偏航暂时不管。</p>
+<h3 id="mpu6050在四旋翼中的应用"><a href="#mpu6050在四旋翼中的应用" class="headerlink" title="mpu6050在四旋翼中的应用"></a>mpu6050在四旋翼中的应用</h3><p>mpu6050集成了一个三轴加速度传感器、三轴角速度传感器以及一个数字运动处理单元DMP。我们可以通过mpu获得飞机当前在三个方向加速度及角速度，我们可以通过内置的DMP将其转换为四元数，进而转换为俯仰角、翻滚角、航向角。当然也不止四元数一个方法。</p>
+<p>要想让飞机保持平衡，在它有一定倾角后，需要改变电机转速。对比于平衡车，电机的控制应该需要三个角及三个方向上的角速度。比如：飞机前倾了一定角度，要想让它平衡就需要后边的电机加速，至于怎么加速：倾斜角度大，就需要转速加的多，倾斜角度减小后，转速就需要加的慢。我们需要适当减小角速度对电机转速的影响:即角速度越快，越需要减慢电机的变化。简易公式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwm = 角度*kp+角速度*kd  //kp较大 kd小于1</div></pre></td></tr></table></figure></p>
+<p>后边慢慢补充吧，如果文章中理解错了以后再改。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/28/四旋翼学习-一/" class="archive-article-date">
+  	<time datetime="2016-09-28T15:17:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/四旋翼/">四旋翼</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-LeetCode刷题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/28/LeetCode刷题/">LeetCode刷题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="LeetCode的第一题"><a href="#LeetCode的第一题" class="headerlink" title="LeetCode的第一题"></a>LeetCode的第一题</h3><p>Two Sum<br>Total Accepted: 309644<br>Total Submissions: 1145736<br>Difficulty: Easy<br>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution.<br>Example:<br>Given nums = [2, 7, 11, 15], target = 9,<br>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p>
+<p>给的接口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class Solution &#123;</div><div class="line">    public int[] twoSum(int[] nums, int target) &#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>给的解释太少，又因为是第一次在这做题，闹了一些笑话。<br>看完题后，想着用最笨的办法，很简单，自己写main函数，用上给的接口。但对于题目给的输入没搞明白，以为是字符串，需要自己将数字提取转换为整数数组，最后还要把结果再转换为字符串输出。才学java，对于字符串转化啥的也不是很了解。上网查了半天终于弄好了，提交却怎么也不正确。百度了一下LeetCode的检测原理才知道，只需要把接口写好就行，根本不要什么字符串转换。咳咳咳。。。<br>字符串转换版的（比较渣）：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> test_1;</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">    <span class="comment">/*public int[] twoSum(int[] nums, int target) &#123;</span></div><div class="line">        for (int i=0; i&lt;nums.length-1; i++)&#123;</div><div class="line">            for (int j=i+1; j&lt;nums.length; j++)&#123;</div><div class="line">                if (nums[i]+nums[j] == target)&#123;</div><div class="line">                    int[] b = &#123;i,j&#125;;</div><div class="line">                    </div><div class="line">                	return b;</div><div class="line">                &#125;         </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return null;</div><div class="line">    &#125;*/</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(String nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        </div><div class="line">    	<span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length()];</div><div class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length(); i++)&#123;</div><div class="line">    		a[i] = nums.charAt(i)-<span class="string">'0'</span>;</div><div class="line">    	&#125;</div><div class="line">    	<span class="comment">//System.out.println(a[0]);</span></div><div class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;a.length-<span class="number">1</span>; i++)&#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;a.length; j++)&#123;</div><div class="line">                <span class="keyword">if</span> (a[i]+a[j] == target)&#123;</div><div class="line">                    <span class="keyword">int</span>[] b = &#123;i,j&#125;;</div><div class="line">                	<span class="keyword">return</span> b;</div><div class="line">                &#125;             </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">    	Test s = <span class="keyword">new</span> Test();</div><div class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">        String array = in.next();</div><div class="line">        <span class="keyword">int</span> target = in.nextInt();</div><div class="line">        <span class="comment">//int[] a = new int[array.length()/2];</span></div><div class="line">        String a = <span class="keyword">new</span> String();</div><div class="line">        </div><div class="line">        <span class="comment">//System.out.println(array);</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;array.length(); i++)&#123;</div><div class="line">        	<span class="keyword">if</span> (array.charAt(i) &lt;= <span class="string">'9'</span> &amp;&amp; array.charAt(i)&gt;=<span class="string">'0'</span>)&#123;</div><div class="line">        		a += array.charAt(i);</div><div class="line">        	&#125;</div><div class="line">        &#125;</div><div class="line">        System.out.println(</div><div class="line">        		Arrays.toString(s.twoSum(<span class="keyword">new</span> String(a), target)));       </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>最终提交结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Solution &#123;</div><div class="line">    public int[] twoSum(int[] nums, int target) &#123;</div><div class="line">        for (int i=0; i&lt;nums.length-1; i++)&#123;</div><div class="line">            for (int j=i+1; j&lt;nums.length; j++)&#123;</div><div class="line">                if (nums[i]+nums[j] == target)&#123;</div><div class="line">                    int[] b = &#123;i,j&#125;;</div><div class="line">                    </div><div class="line">                	return b;</div><div class="line">                &#125;</div><div class="line">                </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return null;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>时间复杂度：O(n^2)</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/28/LeetCode刷题/" class="archive-article-date">
+  	<time datetime="2016-09-28T08:02:48.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-9月26日" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
